@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "trace_id": "checkout-review",
+  "source": "storefront",
+  "recorded_at": "2026-08-21T00:00:00Z",
+  "events": [
+    {
+      "event_id": "inventory-read",
+      "sequence": 1,
+      "timestamp": "2026-08-21T00:00:01Z",
+      "actor": { "actor_id": "order-agent", "kind": "agent" },
+      "tool": { "server_id": "inventory", "name": "get_stock" },
+      "outcome": "succeeded",
+      "side_effect": "read",
+      "approval": { "state": "not_required" },
+      "requested_capabilities": ["inventory.read"],
+      "input_labels": ["internal"],
+      "output_labels": ["internal"],
+      "attributes": { "sdk": { "adapter": "agentproof-typescript", "adapter_version": "0.1" } }
+    }
+  ],
+  "metadata": { "sdk": { "adapter": "agentproof-typescript", "adapter_version": "0.1" } }
+}
