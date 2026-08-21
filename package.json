@@ -35,7 +35,7 @@
     "format:write": "prettier --write .",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test:compile": "tsc -p tsconfig.test.json && mkdir -p .test-dist/fixtures && cp fixtures/*.json .test-dist/fixtures/",
-    "test": "pnpm test:compile && c8 --all --include='.test-dist/src/**/*.js' --exclude='.test-dist/src/cli.js' --reporter=text --reporter=json --check-coverage --branches 95 --lines 95 --functions 95 --statements 95 node --test .test-dist/tests/**/*.test.js",
+    "test": "pnpm test:compile && c8 --all --include='.test-dist/src/**/*.js' --exclude='.test-dist/src/cli.js' --reporter=text --reporter=json --check-coverage --branches 95 --lines 95 --functions 95 --statements 95 node --test .test-dist/tests/all.test.js",
     "sbom": "node scripts/generate-sbom.mjs",
     "pack:check": "pnpm pack --pack-destination artifacts && node scripts/check-package.mjs artifacts",
     "validate": "pnpm clean && pnpm format && pnpm lint && pnpm typecheck && pnpm build && pnpm test && pnpm sbom && pnpm pack:check"

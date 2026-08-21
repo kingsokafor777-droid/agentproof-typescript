@@ -6,7 +6,14 @@ const typedFiles = ["src/**/*.ts", "tests/**/*.ts"];
 
 export default tseslint.config(
   {
-    ignores: ["dist/**", "coverage/**", "artifacts/**", "sbom/**", "node_modules/**"],
+    ignores: [
+      "dist/**",
+      ".test-dist/**",
+      "coverage/**",
+      "artifacts/**",
+      "sbom/**",
+      "node_modules/**",
+    ],
   },
   eslint.configs.recommended,
   {
